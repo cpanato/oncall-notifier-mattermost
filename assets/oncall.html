@@ -1,0 +1,72 @@
+<head>
+<link
+  href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAkM+QAAx8MACUy5wANIxEACR8MAAYiDAD06OcABiAaAAceDwDr5+IA7OfiAO3n4gAmMO0ACSEPABElFAALIQ8A6+3iACw23AAIIQcAAh8NAPHp5QAHHw0AUlfAABAfFQDk4ukALDPlAAkfDQAyObsACSINAAASQwDv790AKjjPAA0eEAAEHQsAKzbdACQw5gAFHQsAABQtAAYdCwDx6uMABx0LAEZWxADz6uMADCATAAUgCwATJxgAKjnVAAYXFAD06eYAAxsJAC4z5gDu6OEACx8OACM62wDX1NAABhoMAPDr4QAmMeQA+vXuAPTq5AAtMeQAKjPnAC08OABNW0sAAxIsAPbo4gArN9QA7enoAFZmXgD06uUACBwQAMC8uwAjL+MACyIQACMx5gAoMuMADCIQAAYeCwAlMeYA7eLsAA8kGwAoNOYAMTu5AAggDgAJIA4AAxwJACkr7wAxOeAACiAOAAMaFwALIA4A9unpAPfp6QDp6NwAlJWXAAYeDAAmMecACB4MACQw6gAiNdwAAxsVAA4kFAAEHAoA7uniAAYcCgAHHAoAMj+vADpHsQDx6OUAKDjUACgy5QDr5usAABEyAAgaEADr4+MAAhoIAAkeDQAlMOsAcX5vAAQdCADx6NUARVq+AAQcCwAEHg4A8+zjACky5gA5QtEABxoRAPXk6QADGgkACBsfAAMhBgALIQ4ABB0JAO/q4QDw6uEAOkHMAC8y3gALIBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYV8kX2goKCExMWYxZmZhWGEaXyQxMTF6gYUxMXMVJoQoU1NfJDdkG4gdVXdmXyZhaCRfTXFCVnUyYgBZBV9fYRoVX0YfS0CGJ1tXYBcNYQ8oSXsHLk4jGDhFQWOJExpYYWU2M2xQUQwpKjoWAn8aWHQ/dmpnOx55SjVHgFwQNEwoARUlIhRDfE8ZPVJdIBoDdCQVEhGHRDBeeDx9cAhYWChfXxovbwoGfkg5aywcWFhhJCQoXysJcm5tgmlmFRoPYSQxYSQmigs+gygmFQMVWBotJiYmJiYmJiYmJiYmDg9hGiYmJiYmJiYmJiYmJiZMGjFfXxVUUxpaDxoPBFNYDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+  rel="icon" type="image/x-icon" />
+<body>
+  <h1>
+  <span class="text">Mattermost Cloud Oncall Rotations</span><span class="span">
+    <img src="https://raw.githubusercontent.com/mattermost/mattermost-handbook/3b54c2cd1f823d1ea012ce45d1baa61fb4fbedbc/.gitbook/assets/branding/logo-downloads/mattermost-logomark-grey.png" width="75" height="75">
+  </span>
+  </h1>
+  <p>Updated: <span id="updated">{{.LastUpdate}}</span>
+  </p>
+  <h2>Note:{{.Notes}}</h2>
+  <div id="oncall">
+    <table>
+      <thead>
+        <tr>
+          <th> Rotation </th>
+          <th colspan="2"> Current </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: bold">Primary</td>
+          <td> <a href="https://github.com/{{.Primary}}">{{.Primary}} </a></td>
+          <td> <img src="https://github.com/{{.Primary}}.png?size=125" alt=""> </td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold">Secondary</td>
+          <td> <a href="https://github.com/{{.Secondary}}">{{.Secondary}} </a></td>
+          <td> <img src="https://github.com/{{.Secondary}}.png?size=125" alt=""> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<title>Mattermost Cloud Oncall Rotations</title>
+<style>
+  body {
+    background-color: #c9e5f6;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  img {
+    padding-left: 10px;
+    max-width: 125px;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  th,
+  td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #oncall {
+    display: inline-block;
+  }
+
+  h1 {
+    display:table;
+    width:100%;
+  }
+</style>
+</head>

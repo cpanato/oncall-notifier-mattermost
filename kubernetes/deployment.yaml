@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oncall
+  namespace: oncall-notifier
+  labels:
+    app.kubernetes.io/name: oncall
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: oncall
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: oncall
+    spec:
+      containers:
+      - name: oncall
+        image: ctadeu/oncall-notifier:latest
+        imagePullPolicy: Always
+        terminationMessagePolicy: "FallbackToLogsOnError"
+        envFrom:
+        - secretRef:
+            name: oncall-secret
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "25m"
+          limits:
+            memory: "250Mi"
+            cpu: "200m"
